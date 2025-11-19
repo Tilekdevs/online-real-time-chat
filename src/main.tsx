@@ -1,9 +1,12 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import { FirebaseProvider } from "./contexts/FirebaseProvider";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+createRoot(document.getElementById("root")!).render(
+  <FirebaseProvider>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </FirebaseProvider>
+);

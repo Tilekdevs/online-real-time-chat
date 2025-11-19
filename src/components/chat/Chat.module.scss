@@ -1,0 +1,133 @@
+.chatWrapper {
+  display: flex;
+  flex-direction: column;
+  height: calc(97vh - 60px);
+  padding: 10px;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding-right: 5px;
+}
+
+.myMessage {
+  text-align: right;
+  margin: 5px 0;
+
+  .name {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  .text {
+    background: var(--my-msg-bg, #4caf50);
+    color: var(--my-msg-text, #fff);
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+}
+
+.otherMessage {
+  text-align: left;
+  margin: 5px 0;
+
+  .name {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  .text {
+    background: var(--other-msg-bg, #e0e0e0);
+    color: var(--other-msg-text, #000);
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+}
+
+.inputForm {
+  display: flex;
+  gap: 5px;
+
+  input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    padding: 10px 15px;
+    border: none;
+    background: #2196f3;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .chatWrapper {
+    height: calc(95vh - 60px);
+    padding: 8px;
+  }
+
+  .messages {
+    margin-bottom: 8px;
+    padding-right: 3px;
+  }
+
+  .myMessage .text,
+  .otherMessage .text {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  .inputForm input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .inputForm button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatWrapper {
+    height: calc(98vh - 60px);
+    padding: 6px;
+  }
+
+  .messages {
+    margin-bottom: 6px;
+    padding-right: 2px;
+  }
+
+  .myMessage .text,
+  .otherMessage .text {
+    padding: 3px 6px;
+    font-size: 13px;
+  }
+
+  .inputForm {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .inputForm input {
+    width: 96%;
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .inputForm button {
+    width: 100%;
+    padding: 8px;
+    font-size: 13px;
+  }
+}

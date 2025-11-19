@@ -1,0 +1,156 @@
+.navbar {
+  padding: 14px 20px;
+  background: var(--card-bg);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.userBlock {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.username {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.containerFunc {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.loginBtn,
+.logoutBtn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.loginBtn {
+  background: #4caf50;
+  color: var(--text-color);
+
+  &:hover {
+    background: #3d9641;
+  }
+}
+
+.logoutBtn {
+  background: #ff4c4c;
+  color: var(--text-color);
+
+  &:hover {
+    background: #e64545;
+  }
+}
+
+.containerFunc {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.themeBtn {
+	padding: 8px 16px;
+	border: none;
+	border-radius: 8px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+
+	background: #f0f0f0;
+	color: #222;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+
+	&:hover {
+		background: #e0e0e0;
+	}
+
+	.dark & {
+		background: #333;
+		color: #fff;
+		box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
+
+		&:hover {
+			background: #444;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 16px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .userBlock {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .containerFunc {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .loginBtn,
+  .logoutBtn,
+  .themeBtn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 12px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .username {
+    font-size: 14px;
+  }
+
+  .containerFunc {
+    width: 100%;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .loginBtn,
+  .logoutBtn,
+  .themeBtn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .userBlock {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
